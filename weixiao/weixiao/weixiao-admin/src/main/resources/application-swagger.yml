@@ -1,0 +1,7 @@
+# Swagger
+swagger:
+  host: 127.0.0.1
+  title: weixiao
+  description: Campus communication
+  disabled: true # 是否禁用swagger
+  redirect-uri: / # 禁用swagger时的重定向地址

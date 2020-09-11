@@ -1,0 +1,21 @@
+export default [
+  {id: 0, name: '全部', abridge: '全部'},
+  {id: 1, name: '经济学院', abridge: '经济学院'},
+  {id: 2, name: '马克思主义学院', abridge: '马院'},
+  {id: 100, name: '法学与公共管理学院', abridge: '法管院'},
+  {id: 4, name: '教育科学学院', abridge: '教科院'},
+  {id: 5, name: '体育学院', abridge: '体院'},
+  {id: 6, name: '文学与新闻传播学院', abridge: '文新院'},
+  {id: 7, name: '外国语学院', abridge: '外院'},
+  {id: 8, name: '数学与计算科学学院', abridge: '数计院'},
+  {id: 9, name: '机械与光电物理学院', abridge: '机电院'},
+  {id: 10, name: '化学与材料工程学院', abridge: '化工院'},
+  {id: 11, name: '生物与食品工程学院', abridge: '生科院'},
+  {id: 12, name: '电气与信息工程学院', abridge: '电气院'},
+  {id: 13, name: '计算机科学与工程学院', abridge: '计科院'},
+  {id: 14, name: '风景园林学院', abridge: '园林院'},
+  {id: 15, name: '商学院', abridge: '商学院'},
+  {id: 16, name: '音乐舞蹈学院', abridge: '音舞院'},
+  {id: 17, name: '美术学院', abridge: '美院'},
+  {id: 18, name: '设计艺术学院', abridge: '设艺院'}
+]

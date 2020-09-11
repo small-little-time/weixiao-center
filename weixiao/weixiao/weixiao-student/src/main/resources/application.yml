@@ -1,0 +1,62 @@
+server:
+  port: 8087
+spring:
+  datasource:
+   url: jdbc:mysql://localhost:3306/z_weixiao?useAffectedRows=true&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false&serverTimezone=GMT%2B8
+   username: root
+   password: root
+   driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+   show-sql: true
+  application:
+    name: weixiao-student
+  #redis
+#  redis:
+#    database: 1
+#    host: localhost
+#    port: 6379
+#    password: 123456
+#    jedis:
+#      pool:
+#        max-active: 8
+#        max-idle: 8
+#        min-idle: 0
+#    expiration: 86400 #redis的超期限时间(60*60*2)
+
+# Swagger
+swagger:
+  host: 127.0.0.1
+  title: weixiao-student
+  description: Campus communication - student
+  disabled: false # 是否禁用swagger
+  redirect-uri: / # 禁用swagger时的重定向地址
+project:
+  version: 1.0.0
+
+# JWT
+jwt:
+  tokenHeader: Authorization #JWT存储的请求头
+  secret: mySecret #JWT加解密使用的密钥
+  expiration: 86400 #JWT的超期限时间(60*60*2)
+  tokenHead: Bearer #JWT负载中拿到开头
+
+eureka:
+  client:
+    registerWithEureka: true # 服务注册开关
+    fetchRegistry: true # 服务发现开关
+    serviceUrl: # 注册到哪一个Eureka Server服务注册中心，多个中间用逗号分隔
+      #defaultZone: http://localhost:6001/eureka
+      defaultZone: http://localhost:6001/eureka
+  instance:
+    instanceId: ${spring.application.name}:${server.port} # 等价于microservice-product:8001
+    prefer-ip-address: true #访问路径就会显示成IP地址
+
+#文件上传
+file:
+  path: C:\\File\imgs\
+  server: http://localhost:8087/
+  pattern: files
+
+face:
+  boy: http://img1.imgtn.bdimg.com/it/u=3999684833,1365604362&fm=26&gp=0.jpg
+  girl: http://zcoder.top:8080/images/93fe0837ca7af34c5b3a36b937f2d6be.jpg
